@@ -1,3 +1,5 @@
+print('\n'*2,'Вариант 1:','\n'*2)
+
 # Вариант 1:
 def summ(a, b, c, d):
     return (a + b + c + d)
@@ -9,6 +11,7 @@ c = int(input('Enter 3rd number: '))
 d = int(input('Enter 4th number: '))
 
 print(f'Sum of {a},{b},{c} and {d} is {summ(a, b, c, d)}')
+print('\n'*2,'Вариант 2:','\n'*2)
 
 # Вариант 2:
 
