@@ -3,7 +3,7 @@ def func(a,b,c):
     print('\n',f'D:={D}','\n')
     match D:
         case _ if D>0:
-            x= str([((0-b)+D**0.5)/2*a,((0-b)-D**0.5)/2*a ])
+            x= str([((0-b)+D**0.5)/2*a,((0-b)-D**0.5)/2*a])
         case _ if D==0:
             x=str(((0-b)/2*a))
         case _ if D<0:
