@@ -1,4 +1,8 @@
 {
   "notebook.output.textLineLimit": 300,
-  "notebook.output.scrolling": true
+  "notebook.output.scrolling": false,
+  "notebook.compactView": false,
+  "notebook.consolidatedOutputButton": false,
+  "notebook.output.wordWrap": true,
+  "notebook.stickyScroll.enabled": true
 }
