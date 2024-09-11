@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #a0d8f3;
+  padding: 100px 50px;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1;
+  color: #4a4a4a;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.form-wrapper {
+  background-color: #eee;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+form {
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 15px;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+input, .btn {
+  outline: none;
+  border-style: none;
+  border-radius: 15px;
+  background-color: #eee;
+  padding: 10px 15px;
+  width: 100%;
+  height: 40px;
+  font-family: "Quicksand", sans-serif;
+  color: #4a4a4a;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.btn {
+  cursor: pointer;
+  margin: 40px 0;
+}
+
+input, .switch-btn {
+  margin: 8px 0;
+}
+
+.switch-btn {
+  width: 48%;
+  position: relative;
+}
+.switch-btn:before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#888), to(rgba(255, 255, 255, 0))), #888;
+  background: linear-gradient(180deg, #888, rgba(255, 255, 255, 0)), #888;
+  box-shadow: -1px -1px 5px #fff, 0 2px 5px #888;
+}
+
+.inset, .active {
+  box-shadow: inset -4px -4px 10px #fff, inset 4px 2px 12px #b9bbc4;
+}
+
+.outset {
+  box-shadow: 5px 5px 10px #b9bbc4, -5px -5px 12px #fff;
+}
+
+.login-btn:hover {
+  box-shadow: 5px 5px 5px #b9bbc4, -5px -5px 5px #fff;
+}
+
+.active:before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f49a74), to(rgba(255, 255, 255, 0))), #f49a74;
+  background: linear-gradient(180deg, #f49a74, rgba(255, 255, 255, 0)), #f49a74;
+  box-shadow: -1px -1px 5px #fff, 0 2px 5px #f49a74;
+}
+
+@media only screen and (max-width: 400px) {
+  input, .btn {
+    font-size: 12px;
+  }
+
+  .switch-btn {
+    width: 100%;
+  }
+}

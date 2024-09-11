@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="form-wrapper">
+    <h2>Log-In Form</h2>
+    <form class="outset" action="#" method="post">
+      <label>
+        <input name="name" class="inset" id="name" type="text" aria-label="Name" placeholder="Name">
+      </label>
+      <label>
+        <input name="password" class="inset" id="password" type="text" aria-label="Password" placeholder="Password">
+      </label>
+      <div class="btn-wrapper">
+        <button class="btn switch-btn outset" type="button" id="btn-remember">Remember Me</button>
+        <button class="btn switch-btn outset" type="button" id="btn-night">Night Theme</button>
+      </div>
+      <button class="btn login-btn outset" type="button">Log In</button>
+    </form>
+  </div>
+  <script id="rendered-js" >
+    function buttonClicked() {
+      this.classList.toggle('outset');
+      this.classList.toggle('active');
+    }
+    document.querySelectorAll('.switch-btn').forEach(button => {
+      button.onclick = buttonClicked;
+    });
+    //# sourceURL=pen.js
+        </script>
+</body>
+</html>
