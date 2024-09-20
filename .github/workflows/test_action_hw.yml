@@ -1,0 +1,21 @@
+name: Pipeline Test
+run-name: ${{ github.actor }} run test
+on: push
+jobs:
+  Print-description:
+    runs-on: windows-latest
+    steps:
+      - run: echo "Run test"
+      - run: echo "Runner os is ${{  runner.os  }}"
+      - run: echo "Repo name is ${{ github.repository }}"
+  Clone-Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Chekout repo
+        uses: actions/checkout@v4
+      - run: echo " Repository ${{ github.repository }}  has been cloned"
+      - run: echo "Runner os is ${{  runner.os  }}"
+      - run: echo " Job name is ${{ job.name }} and status ${{ job.status }}"
+  
+      
+      
