@@ -7,15 +7,20 @@ jobs:
     steps:
       - run: echo "Run test"
       - run: echo "Runner os is ${{  runner.os  }}"
+  Print-Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Event ${{ github.event_name }}"
       - run: echo "Repo name is ${{ github.repository }}"
   Clone-Repo:
     runs-on: ubuntu-latest
+    needs: [Print-description, Print-Repo]
     steps:
       - name: Chekout repo
         uses: actions/checkout@v4
       - run: echo " Repository ${{ github.repository }}  has been cloned"
       - run: echo "Runner os is ${{  runner.os  }}"
       - run: echo " Job name is ${{ job.name }} and status ${{ job.status }}"
-  
+
       
       
