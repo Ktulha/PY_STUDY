@@ -7,6 +7,10 @@ jobs:
     steps:
       - run: echo "Run test"
       - run: echo "Runner os is ${{  runner.os  }}"
+  Print-Repo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Event ${{ github.event_name }}"
       - run: echo "Repo name is ${{ github.repository }}"
   Clone-Repo:
     runs-on: ubuntu-latest
