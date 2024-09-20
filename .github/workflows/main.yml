@@ -5,7 +5,7 @@ jobs:
   Introduse-Task:
     runs-on: ubuntu
     steps:
-      - run: echo "Repository name: ${{ github.repository }}"
+      - run: echo "Repository name:  "
       - run: echo "Runner os: ${{ runner.os }}"
       - run: echo "Event name: : ${{ github.event_name }}"
   Checkout-Task:
