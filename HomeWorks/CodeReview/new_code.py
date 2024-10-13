@@ -7,7 +7,7 @@ class Customer:
     self.address = address
 
   def __repr__(self) -> str:
-    return f"Customer('{self.name}', '{self.address}')"
+    return f"{self.name} ({self.address})"
 
 class Account:
   _balance:float=0
@@ -27,7 +27,7 @@ class Account:
     return self._balance
 
   def __repr__(self) -> str:
-    return  f"Account('{self.customer}', '{self.account_number}')"
+    return  f"Account {self.account_number} by {self.customer}"
 
 class Bank:
   def  __init__(self):
@@ -63,7 +63,7 @@ b_test=bank.create_account(test,500)
 print (b_test,b_test.get_balance()) 
 b_test.deposit(1200)
 t=bank.get_account(b_test.account_number)
-t.get_balance()
+print(f"{t}, balance {t.get_balance()}")
 try:
   b_test.withdraw(1750)
 except ValueError as e:
