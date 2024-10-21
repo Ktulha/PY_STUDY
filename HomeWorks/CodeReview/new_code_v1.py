@@ -175,18 +175,36 @@ class Bank:
         return f"{account}, balance {account.get_balance()}"
 
 # Example
-bank=Bank()
-test=Customer('John Doe','NY,1453-233, 13 av')
-print(test)
+def banking_scenario():
+  bank=Bank()
+  customer1 = Customer("Alice", "Moscow, Stremyannyi per, 1")
+  customer2 = Customer("Bob", "Vorkuta, ul. Lenina, 5")
 
-b_test=bank.create_account(test,1500)
-print (b_test,b_test.get_balance()) 
+  # Alice opens an account and deposits some money
+  alice_account = bank.create_account(customer1,500.0)
+  alice_account.deposit(100.0)
+  print(f"Alice's balance: {alice_account.get_balance()}")  # Alice's balance: 600.0  
+  
+    # Bob opens an account and deposits some money
+  bob_account = bank.create_account(customer2,1000.0)
+  bob_account.deposit(500.0)
+  print(f"Bob's balance: {bob_account.get_balance()}")  # Bob's balance: 1500.0
+  
+  # Alice withdraws some money from her account
+  alice_account.withdraw(300.0)
+  print(f"Alice's balance: {alice_account.get_balance()}")  # Alice's balance: 300.0
+  
+  alice_account.withdraw(500.0)# Insufficient funds
+  bob_account.deposit(-500.0) #Amount must be non-negative
 
-b_test.withdraw(1000)
+  # Bank retrieves Alice's account using the account number
+  retrieved_account = bank.get_account(alice_account.account_number)
+  print(f"Account {retrieved_account.account_number} by {retrieved_account.customer.name} ({retrieved_account.customer.address}), balance {retrieved_account.get_balance()}") # Account XXXXXX by Alice (Moscow, Stremyannyi per, 1), balance 300.0
+  
+  print(bank.get_account_info(alice_account.account_number)) # Account XXXXXX by Alice (Moscow, Stremyannyi per, 1), balance 300.0
 
 
-# t=bank.get_account(b_test.account_number)
-print(bank.get_account_info(b_test.account_number))
 
-b_test.withdraw(1750)
+
+banking_scenario()   
 

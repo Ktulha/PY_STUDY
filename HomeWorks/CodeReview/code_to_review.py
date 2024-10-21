@@ -70,6 +70,7 @@ def banking_scenario():
   print(f"Alice's balance: {alice_account.balance}")  # Alice's balance: 300.0
 
   # Alice tries to withdraw more money than she has in her account
+  
   try:
     alice_account.withdraw(500.0)
   except ValueError as e:
