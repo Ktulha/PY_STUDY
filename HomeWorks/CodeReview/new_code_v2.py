@@ -5,6 +5,8 @@ import random
 
 
 class Customer:
+  """ Customer class """
+
   def __init__(self, name:str, address:str):
     self.name=name
     self.address=address
